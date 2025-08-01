@@ -1,0 +1,13 @@
+shootDelay = 0.5
+enemyNumber = 10
+enemySize = 20
+enemyRadTolerance = 1/(2*3.1415)
+sentrySize = 100
+sentryInertia = 10
+sentryEmptyMass = 10
+bulletMass = 10
+bulletNumber = 20
+screenW = 800
+screenH = 800
+drawFrequency = 60
+circleRadius = 350
