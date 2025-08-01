@@ -36,7 +36,6 @@ class Sentry:
 				shoot = True
 				self.isShooting = False
 		self.move()
-		print(self.velocity)
 		return shoot, shootAngle
 	def draw(self, window):
 		pygame.draw.line(window, (255,0,0), (screenW//2, screenH//2), (round(screenW/2 + sentrySize*math.cos(self.angle)), round(screenH/2 + sentrySize*math.sin(self.angle))))
