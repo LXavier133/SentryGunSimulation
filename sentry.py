@@ -17,7 +17,7 @@ class Sentry:
 	def update_velocity(self):
 		self.velocity += self.acceleration
 	def update_acceleration(self, power):
-		self.acceleration = power/(self.I*self.velocity+1e-5)
+		self.acceleration = power/(self.I*self.velocity+1e-5) -airResistance*self.velocity
 	def move(self):
 		power = self.power()
 		self.update_acceleration(power)
