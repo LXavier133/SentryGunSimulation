@@ -2,7 +2,7 @@ from constants import *
 import pygame
 import random
 import math
-
+import time
 class Sentry:
 	def __init__(self):
 		self.angle = 0
@@ -14,13 +14,14 @@ class Sentry:
 		self.enemy_angle = 0
 	def update_angle(self):
 		self.angle += self.velocity
+		self.angle = self.angle % (2*math.pi)		
 	def update_velocity(self):
 		self.velocity += self.acceleration
-	def update_acceleration(self, power):
-		self.acceleration = power/(self.I*self.velocity+1e-5) -airResistance*self.velocity
+	def update_acceleration(self, torque):
+		self.acceleration = torque/(self.I) -airResistance*self.velocity
 	def move(self):
-		power = self.power()
-		self.update_acceleration(power)
+		torque = self.torque()
+		self.update_acceleration(torque)
 		self.update_velocity()
 		self.update_angle()
 	def get_enemy_angle(self, enemy_angle):
@@ -49,5 +50,6 @@ class Sentry:
 		return self.angle
 	def should_shoot(self):
 		return False
-	def power(self):
-		return 0.0
+	def torque(self):
+		return 0
+

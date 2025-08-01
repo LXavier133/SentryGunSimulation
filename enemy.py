@@ -2,6 +2,7 @@ from constants import *
 import random
 import pygame
 import math
+import time
 
 class Enemy:
 	def __init__(self):

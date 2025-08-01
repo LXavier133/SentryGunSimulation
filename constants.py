@@ -1,7 +1,7 @@
-shootDelay = 0.5
+shootDelay = 0.2
 enemyNumber = 10
 enemySize = 20
-enemyRadTolerance = 1/(8*3.1415)
+enemyRadTolerance = 1/(2*3.1415)
 sentrySize = 100
 sentryInertia = 10
 sentryEmptyMass = 10
@@ -11,4 +11,4 @@ screenW = 800
 screenH = 800
 drawFrequency = 60
 circleRadius = 350
-airResistance = 1
+airResistance = 0.05
