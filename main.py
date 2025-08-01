@@ -33,5 +33,9 @@ while run:
 	print_text(window)
 	pygame.draw.circle(window, (0,0,0), (screenW//2,screenH//2), circleRadius, width = 1)
 	simulation.update()
+	if simulation.sentry.bullets == 0 or simulation.enemy_left == 0 :
+		run = False
+		print(str(simulation.enemy_left) + " enemies left!")
+		print(str(elapsedTime) + " seconds!")
 	simulation.draw(window)
 	pygame.display.update()
